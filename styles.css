@@ -149,6 +149,17 @@ main {
     line-height: 1.6rem;
     color: #757575;
 }
+/*SCROLL TABLES AND CONTAINER*/
+.main-tables-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+/*STYLES TABLES (ALL)*/
 .main-currency-table {
     width: 70%;
     min-width: 235px;
@@ -156,6 +167,8 @@ main {
     height: 360px;
     margin: 0 auto;
     font-family: "Inter", sans-serif;
+    scroll-snap-align: center;
+    margin-left: 50%;
 }
 .main-currency-table .currency-table-title {
     margin-bottom: 15px;
@@ -166,7 +179,7 @@ main {
 }
 
 
-/*PRIMERA TABLA*/
+/*FIRST TABLE*/
 .currency-table-container {
     width: 90%;
     min-width: 230px;
@@ -247,8 +260,11 @@ main {
 }
 
 
-/*SEGUNDA TABLA*/
-
+/*SECOND TABLE*/
+.main-currency-table-2{
+    margin-right: 50%;
+    margin-left: 25%;
+}
 .main-currency-table-2 .currency-table-title{
     color: var(--secondary-blue);
 }
@@ -256,7 +272,7 @@ main {
     background-color: var(--soft-blue);
 }
 
-/*SECCION BENEFICIOS*/
+/*SECTION BENEFITS*/
 
 .main-product-detail {
     position: relative;
@@ -343,7 +359,7 @@ main {
     color:#808080 ;
 }
 
-/*imagen grande*/
+/*BIG IMAGE*/
 .bitcoin-img-container{
     width: 100%;
     min-width: 320px;
@@ -362,7 +378,7 @@ main {
     color: var(--white);
 }
 
-/*PLANES*/
+/*PLANS*/
 
 .main-plans-container{
     width: 100%;
@@ -370,6 +386,20 @@ main {
     text-align: center;
     background-color: var(--white);
 }
+
+/*SCROLL PLANS CARDS*/
+.plans-container-slider{
+    display: flex;
+    gap: 20px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    margin-bottom: 64px;
+
+}
+
+/*STYLES PLANS CARDS*/
 .plans-title{
     width: 85%;
     min-width: 288px;
@@ -395,11 +425,12 @@ main {
 
 .plans-container-card{
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 64px;
+    margin: 50px auto 0px;
     padding: 0 15px;
     background-color: var(--white);
     border-radius: 15px;
@@ -438,11 +469,11 @@ main {
     
 }
 .plan-card-price span{
-    position: absolute;
-    top: 38px;
-    left: 76px;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 500;
+    line-height: 4rem;
+    display: inline-block;
+    vertical-align: text-top;
 }
 .plan-card-saving{
     font-size: 1.2rem;
@@ -470,4 +501,33 @@ main {
     height: 20px;
     background-image: url("/assets/iconos/arrow-right-1.svg");
     vertical-align: text-bottom;
+}
+
+/*FINISH STYLES PLANS CARDS*/
+/*---------------------------------------------------------*/
+/*FOOTER STYLES*/
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li{
+    margin: 10px 0;
+}
+.left a {
+    text-decoration: none;
+    color: var(--white);
 }
