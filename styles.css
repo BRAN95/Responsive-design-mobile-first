@@ -151,6 +151,9 @@ main {
 }
 /*SCROLL TABLES AND CONTAINER*/
 .main-tables-container{
+    
+}
+.tables-container-slider{
     display: flex;
     width: 100%;
     height: auto;
@@ -364,7 +367,7 @@ main {
     width: 100%;
     min-width: 320px;
     height: 50vh;
-    background-image: url("/assets/imagenes/bitcoinbaby\ 1.jpg");
+    background-image: url("/assets/imagenes/bitcoinbaby\ 1\ \(1\).jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -451,7 +454,11 @@ main {
     line-height: 1.5rem;
 }
 .plan-info-container{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 226px;
 }
 .plan-card-title{
     padding-top: 30px;
@@ -530,4 +537,8 @@ footer .left ul{
 .left a {
     text-decoration: none;
     color: var(--white);
+}
+.right img{
+    width: 60px;
+    height: 60px;
 }
